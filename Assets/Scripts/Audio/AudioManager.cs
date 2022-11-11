@@ -85,7 +85,7 @@ namespace Village.Audio
             newSound.source = gameObject.AddComponent<AudioSource>();
             newSound.source.clip = newSound.clip;
 
-            newSound.source.volume = newSound.volume * (loop ? PlayerPrefs.GetFloat("music_volume") : PlayerPrefs.GetFloat("sfx_volume"));
+            newSound.source.volume = newSound.volume * (loop ? PlayerPrefs.GetFloat("music_volume", 1) : PlayerPrefs.GetFloat("sfx_volume", 1));
             newSound.source.pitch = newSound.pitch;
 
             newSound.source.loop = loop;
