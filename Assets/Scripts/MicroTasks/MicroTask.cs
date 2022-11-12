@@ -20,12 +20,15 @@ public abstract class MicroTask : MonoBehaviour
     {
         _finished = callback;
         _activated = true;
+        
+        gameObject.SetActive(true);
     }
 
     //Termine o minigame, em caso de fim do tempo do dia, passe falha para forçar saida
     public void Finish(bool result)
     {
         _activated = false;
+        gameObject.SetActive(false);
         
         if (result == true)
         {
