@@ -2,19 +2,21 @@ using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
-public class Work : MicroTask
-{
-    [SerializeField]
+public class SumTask : MicroTask
+{[SerializeField]
     private string _correct;
     
     [SerializeField]
     private string _wrong;
     
-    private int _awnser;
-
     [SerializeField]
-    private Sprite _sprite;
-
+    private string _number1;
+    
+    [SerializeField]
+    private string _number2;
+    
+    private int _awnser;
+    
     [SerializeField]
     private Image _image;
 
@@ -23,6 +25,12 @@ public class Work : MicroTask
     
     [SerializeField]
     private TMPro.TMP_Text _rightOption;
+    
+    [SerializeField]
+    private TMPro.TMP_Text _rightNumber;
+    
+    [SerializeField]
+    private TMPro.TMP_Text _leftNumber;
 
     public override void StartTask(Finished callback)
     {
@@ -36,14 +44,17 @@ public class Work : MicroTask
         {
             _leftOption.text = _correct;
             _rightOption.text = _wrong;
+            _leftNumber.text = _number1;
+            _rightOption.text = _number2;
+
         }
         else
         {
             _leftOption.text = _wrong;
             _rightOption.text = _correct;
+            _leftNumber.text = _number2;
+            _rightOption.text = _number1;
         }
-
-        _image.sprite = _sprite;
     }
 
     public void Update()
@@ -64,4 +75,5 @@ public class Work : MicroTask
         
         Finish(guess == _awnser);
     }
+  
 }
