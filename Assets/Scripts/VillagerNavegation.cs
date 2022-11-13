@@ -24,12 +24,11 @@ public class VillagerNavegation : MonoBehaviour
     
     private int _coins;
 
-    public void GetRandomTask()
+    public void GetTask(int index)
     {
         StartCoroutine(DisableEventSystem());
         
-        var i = Random.Range(0, _microTasks.Count);
-        _microTasks[i].StartTask(UpdateCoins);
+        _microTasks[index].StartTask(UpdateCoins);
     }
 
     private void UpdateCoins(int coins)
