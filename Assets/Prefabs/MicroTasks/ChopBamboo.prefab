@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coins: 3
-  _animatio1: {fileID: 1895511571, guid: 66c6fff195c7db044917535239b3c4d6, type: 3}
-  _animatio2: {fileID: -728246148, guid: 66c6fff195c7db044917535239b3c4d6, type: 3}
+  _animatio1: {fileID: -986573965, guid: 0811ec18b02dd25438678ce84683a0b5, type: 3}
+  _animatio2: {fileID: -1006482812, guid: 0811ec18b02dd25438678ce84683a0b5, type: 3}
   _image: {fileID: 7990941108579340370}
   _goal: 10
